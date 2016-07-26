@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42FDDD091D47EEDB0094D29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD081D47EEDB0094D29D /* main.m */; };
+		42FDDD0C1D47EEDB0094D29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD0B1D47EEDB0094D29D /* AppDelegate.m */; };
+		42FDDD0F1D47EEDB0094D29D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD0E1D47EEDB0094D29D /* ViewController.m */; };
+		42FDDD121D47EEDB0094D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD101D47EEDB0094D29D /* Main.storyboard */; };
+		42FDDD141D47EEDB0094D29D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD131D47EEDB0094D29D /* Assets.xcassets */; };
+		42FDDD171D47EEDB0094D29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42FDDD041D47EEDB0094D29D /* walking-tours-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walking-tours-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42FDDD081D47EEDB0094D29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42FDDD0A1D47EEDB0094D29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		42FDDD0B1D47EEDB0094D29D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		42FDDD0D1D47EEDB0094D29D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		42FDDD0E1D47EEDB0094D29D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		42FDDD111D47EEDB0094D29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42FDDD131D47EEDB0094D29D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		42FDDD161D47EEDB0094D29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		42FDDD181D47EEDB0094D29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42FDDD011D47EEDB0094D29D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42FDDCFB1D47EEDB0094D29D = {
+			isa = PBXGroup;
+			children = (
+				42FDDD061D47EEDB0094D29D /* walking-tours-manager */,
+				42FDDD051D47EEDB0094D29D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42FDDD051D47EEDB0094D29D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42FDDD041D47EEDB0094D29D /* walking-tours-manager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42FDDD061D47EEDB0094D29D /* walking-tours-manager */ = {
+			isa = PBXGroup;
+			children = (
+				42FDDD0A1D47EEDB0094D29D /* AppDelegate.h */,
+				42FDDD0B1D47EEDB0094D29D /* AppDelegate.m */,
+				42FDDD0D1D47EEDB0094D29D /* ViewController.h */,
+				42FDDD0E1D47EEDB0094D29D /* ViewController.m */,
+				42FDDD101D47EEDB0094D29D /* Main.storyboard */,
+				42FDDD131D47EEDB0094D29D /* Assets.xcassets */,
+				42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */,
+				42FDDD181D47EEDB0094D29D /* Info.plist */,
+				42FDDD071D47EEDB0094D29D /* Supporting Files */,
+			);
+			path = "walking-tours-manager";
+			sourceTree = "<group>";
+		};
+		42FDDD071D47EEDB0094D29D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42FDDD081D47EEDB0094D29D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42FDDD031D47EEDB0094D29D /* walking-tours-manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42FDDD1B1D47EEDB0094D29D /* Build configuration list for PBXNativeTarget "walking-tours-manager" */;
+			buildPhases = (
+				42FDDD001D47EEDB0094D29D /* Sources */,
+				42FDDD011D47EEDB0094D29D /* Frameworks */,
+				42FDDD021D47EEDB0094D29D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "walking-tours-manager";
+			productName = "walking-tours-manager";
+			productReference = 42FDDD041D47EEDB0094D29D /* walking-tours-manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42FDDCFC1D47EEDB0094D29D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = WERUreo;
+				TargetAttributes = {
+					42FDDD031D47EEDB0094D29D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 42FDDCFF1D47EEDB0094D29D /* Build configuration list for PBXProject "walking-tours-manager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42FDDCFB1D47EEDB0094D29D;
+			productRefGroup = 42FDDD051D47EEDB0094D29D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42FDDD031D47EEDB0094D29D /* walking-tours-manager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42FDDD021D47EEDB0094D29D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42FDDD171D47EEDB0094D29D /* LaunchScreen.storyboard in Resources */,
+				42FDDD141D47EEDB0094D29D /* Assets.xcassets in Resources */,
+				42FDDD121D47EEDB0094D29D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42FDDD001D47EEDB0094D29D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42FDDD0F1D47EEDB0094D29D /* ViewController.m in Sources */,
+				42FDDD0C1D47EEDB0094D29D /* AppDelegate.m in Sources */,
+				42FDDD091D47EEDB0094D29D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		42FDDD101D47EEDB0094D29D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42FDDD111D47EEDB0094D29D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42FDDD161D47EEDB0094D29D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42FDDD191D47EEDB0094D29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42FDDD1A1D47EEDB0094D29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42FDDD1C1D47EEDB0094D29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.werureo.walking-tours-manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42FDDD1D1D47EEDB0094D29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.werureo.walking-tours-manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42FDDCFF1D47EEDB0094D29D /* Build configuration list for PBXProject "walking-tours-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42FDDD191D47EEDB0094D29D /* Debug */,
+				42FDDD1A1D47EEDB0094D29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42FDDD1B1D47EEDB0094D29D /* Build configuration list for PBXNativeTarget "walking-tours-manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42FDDD1C1D47EEDB0094D29D /* Debug */,
+				42FDDD1D1D47EEDB0094D29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42FDDCFC1D47EEDB0094D29D /* Project object */;
+}
