@@ -13,9 +13,13 @@
 		42FDDD121D47EEDB0094D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD101D47EEDB0094D29D /* Main.storyboard */; };
 		42FDDD141D47EEDB0094D29D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD131D47EEDB0094D29D /* Assets.xcassets */; };
 		42FDDD171D47EEDB0094D29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */; };
+		42FDDD1F1D47F1380094D29D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */; };
+		C14A3CAF9D68B8339ABA87C6 /* libPods-walking-tours-manager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.release.xcconfig"; sourceTree = "<group>"; };
+		207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-walking-tours-manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FDDD041D47EEDB0094D29D /* walking-tours-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walking-tours-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FDDD081D47EEDB0094D29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42FDDD0A1D47EEDB0094D29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		42FDDD131D47EEDB0094D29D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42FDDD161D47EEDB0094D29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42FDDD181D47EEDB0094D29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		59E30ED024E4EB61EEBF421D /* Pods-walking-tours-manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14A3CAF9D68B8339ABA87C6 /* libPods-walking-tours-manager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10967C47E3F07ED8BFC01665 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59E30ED024E4EB61EEBF421D /* Pods-walking-tours-manager.debug.xcconfig */,
+				1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		42FDDCFB1D47EEDB0094D29D = {
 			isa = PBXGroup;
 			children = (
 				42FDDD061D47EEDB0094D29D /* walking-tours-manager */,
 				42FDDD051D47EEDB0094D29D /* Products */,
+				10967C47E3F07ED8BFC01665 /* Pods */,
+				D813C04AEE3AF35B6C3FB2BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +84,7 @@
 				42FDDD131D47EEDB0094D29D /* Assets.xcassets */,
 				42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */,
 				42FDDD181D47EEDB0094D29D /* Info.plist */,
+				42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */,
 				42FDDD071D47EEDB0094D29D /* Supporting Files */,
 			);
 			path = "walking-tours-manager";
@@ -79,6 +98,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D813C04AEE3AF35B6C3FB2BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42FDDD1B1D47EEDB0094D29D /* Build configuration list for PBXNativeTarget "walking-tours-manager" */;
 			buildPhases = (
+				90B92F0520EBAB474151282C /* Check Pods Manifest.lock */,
 				42FDDD001D47EEDB0094D29D /* Sources */,
 				42FDDD011D47EEDB0094D29D /* Frameworks */,
 				42FDDD021D47EEDB0094D29D /* Resources */,
+				CC61B4B17BE3B339FB5B6C9B /* Embed Pods Frameworks */,
+				76D7EB8CACAB83D4E05526DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,12 +167,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FDDD171D47EEDB0094D29D /* LaunchScreen.storyboard in Resources */,
+				42FDDD1F1D47F1380094D29D /* GoogleService-Info.plist in Resources */,
 				42FDDD141D47EEDB0094D29D /* Assets.xcassets in Resources */,
 				42FDDD121D47EEDB0094D29D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76D7EB8CACAB83D4E05526DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90B92F0520EBAB474151282C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC61B4B17BE3B339FB5B6C9B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		42FDDD001D47EEDB0094D29D /* Sources */ = {
@@ -214,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -253,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -263,6 +342,7 @@
 		};
 		42FDDD1C1D47EEDB0094D29D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59E30ED024E4EB61EEBF421D /* Pods-walking-tours-manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
@@ -274,6 +354,7 @@
 		};
 		42FDDD1D1D47EEDB0094D29D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
@@ -302,6 +383,7 @@
 				42FDDD1D1D47EEDB0094D29D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
