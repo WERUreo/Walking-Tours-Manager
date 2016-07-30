@@ -6,5 +6,9 @@ target 'walking-tours-manager' do
   pod 'Firebase'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 end
 

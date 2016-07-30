@@ -7,30 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423FA0731D4A36760091D316 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423FA0721D4A36760091D316 /* CustomButton.m */; };
+		42C7357F1D4D54630013B6DA /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C7357E1D4D54630013B6DA /* DataService.m */; };
+		42C735831D4D612C0013B6DA /* HistoricLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C735821D4D612C0013B6DA /* HistoricLocation.m */; };
+		42C735861D4D6B9A0013B6DA /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C735851D4D6B9A0013B6DA /* TestViewController.m */; };
 		42FDDD091D47EEDB0094D29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD081D47EEDB0094D29D /* main.m */; };
 		42FDDD0C1D47EEDB0094D29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD0B1D47EEDB0094D29D /* AppDelegate.m */; };
-		42FDDD0F1D47EEDB0094D29D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD0E1D47EEDB0094D29D /* ViewController.m */; };
 		42FDDD121D47EEDB0094D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD101D47EEDB0094D29D /* Main.storyboard */; };
 		42FDDD141D47EEDB0094D29D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD131D47EEDB0094D29D /* Assets.xcassets */; };
 		42FDDD171D47EEDB0094D29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */; };
 		42FDDD1F1D47F1380094D29D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */; };
+		42FDDD231D484D740094D29D /* UIColor+Pistachio.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD221D484D740094D29D /* UIColor+Pistachio.m */; };
+		42FDDD271D484E540094D29D /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD261D484E540094D29D /* LoginVC.m */; };
 		C14A3CAF9D68B8339ABA87C6 /* libPods-walking-tours-manager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.release.xcconfig"; sourceTree = "<group>"; };
 		207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-walking-tours-manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		423FA0711D4A36760091D316 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomButton.h; path = Views/CustomButton.h; sourceTree = "<group>"; };
+		423FA0721D4A36760091D316 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomButton.m; path = Views/CustomButton.m; sourceTree = "<group>"; };
+		42C7357D1D4D54630013B6DA /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataService.h; path = Services/DataService.h; sourceTree = "<group>"; };
+		42C7357E1D4D54630013B6DA /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataService.m; path = Services/DataService.m; sourceTree = "<group>"; };
+		42C735811D4D612C0013B6DA /* HistoricLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricLocation.h; path = Models/HistoricLocation.h; sourceTree = "<group>"; };
+		42C735821D4D612C0013B6DA /* HistoricLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricLocation.m; path = Models/HistoricLocation.m; sourceTree = "<group>"; };
+		42C735841D4D6B9A0013B6DA /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = Controllers/TestViewController.h; sourceTree = "<group>"; };
+		42C735851D4D6B9A0013B6DA /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = Controllers/TestViewController.m; sourceTree = "<group>"; };
 		42FDDD041D47EEDB0094D29D /* walking-tours-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walking-tours-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FDDD081D47EEDB0094D29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42FDDD0A1D47EEDB0094D29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		42FDDD0B1D47EEDB0094D29D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		42FDDD0D1D47EEDB0094D29D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		42FDDD0E1D47EEDB0094D29D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		42FDDD111D47EEDB0094D29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42FDDD131D47EEDB0094D29D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42FDDD161D47EEDB0094D29D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42FDDD181D47EEDB0094D29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		42FDDD211D484D740094D29D /* UIColor+Pistachio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Pistachio.h"; path = "Categories/UIColor+Pistachio.h"; sourceTree = "<group>"; };
+		42FDDD221D484D740094D29D /* UIColor+Pistachio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Pistachio.m"; path = "Categories/UIColor+Pistachio.m"; sourceTree = "<group>"; };
+		42FDDD251D484E540094D29D /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = Controllers/LoginVC.h; sourceTree = "<group>"; };
+		42FDDD261D484E540094D29D /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = Controllers/LoginVC.m; sourceTree = "<group>"; };
 		59E30ED024E4EB61EEBF421D /* Pods-walking-tours-manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +70,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		423FA0701D4A36540091D316 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				423FA0711D4A36760091D316 /* CustomButton.h */,
+				423FA0721D4A36760091D316 /* CustomButton.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		42506CB61D4B72E200B33B5E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */,
+				42FDDD101D47EEDB0094D29D /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		42C7357C1D4D54400013B6DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				42C7357D1D4D54630013B6DA /* DataService.h */,
+				42C7357E1D4D54630013B6DA /* DataService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		42C735801D4D61000013B6DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42C735811D4D612C0013B6DA /* HistoricLocation.h */,
+				42C735821D4D612C0013B6DA /* HistoricLocation.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		42FDDCFB1D47EEDB0094D29D = {
 			isa = PBXGroup;
 			children = (
@@ -76,15 +127,15 @@
 		42FDDD061D47EEDB0094D29D /* walking-tours-manager */ = {
 			isa = PBXGroup;
 			children = (
+				42FDDD201D484D650094D29D /* Categories */,
+				42FDDD241D484E300094D29D /* Controllers */,
+				42C735801D4D61000013B6DA /* Models */,
+				42C7357C1D4D54400013B6DA /* Services */,
+				42506CB61D4B72E200B33B5E /* Storyboards */,
+				423FA0701D4A36540091D316 /* Views */,
 				42FDDD0A1D47EEDB0094D29D /* AppDelegate.h */,
 				42FDDD0B1D47EEDB0094D29D /* AppDelegate.m */,
-				42FDDD0D1D47EEDB0094D29D /* ViewController.h */,
-				42FDDD0E1D47EEDB0094D29D /* ViewController.m */,
-				42FDDD101D47EEDB0094D29D /* Main.storyboard */,
 				42FDDD131D47EEDB0094D29D /* Assets.xcassets */,
-				42FDDD151D47EEDB0094D29D /* LaunchScreen.storyboard */,
-				42FDDD181D47EEDB0094D29D /* Info.plist */,
-				42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */,
 				42FDDD071D47EEDB0094D29D /* Supporting Files */,
 			);
 			path = "walking-tours-manager";
@@ -93,9 +144,31 @@
 		42FDDD071D47EEDB0094D29D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42FDDD181D47EEDB0094D29D /* Info.plist */,
+				42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */,
 				42FDDD081D47EEDB0094D29D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42FDDD201D484D650094D29D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				42FDDD211D484D740094D29D /* UIColor+Pistachio.h */,
+				42FDDD221D484D740094D29D /* UIColor+Pistachio.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		42FDDD241D484E300094D29D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				42FDDD251D484E540094D29D /* LoginVC.h */,
+				42FDDD261D484E540094D29D /* LoginVC.m */,
+				42C735841D4D6B9A0013B6DA /* TestViewController.h */,
+				42C735851D4D6B9A0013B6DA /* TestViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		D813C04AEE3AF35B6C3FB2BD /* Frameworks */ = {
@@ -228,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42FDDD0F1D47EEDB0094D29D /* ViewController.m in Sources */,
 				42FDDD0C1D47EEDB0094D29D /* AppDelegate.m in Sources */,
+				423FA0731D4A36760091D316 /* CustomButton.m in Sources */,
+				42FDDD231D484D740094D29D /* UIColor+Pistachio.m in Sources */,
+				42C7357F1D4D54630013B6DA /* DataService.m in Sources */,
+				42FDDD271D484E540094D29D /* LoginVC.m in Sources */,
+				42C735831D4D612C0013B6DA /* HistoricLocation.m in Sources */,
+				42C735861D4D6B9A0013B6DA /* TestViewController.m in Sources */,
 				42FDDD091D47EEDB0094D29D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
