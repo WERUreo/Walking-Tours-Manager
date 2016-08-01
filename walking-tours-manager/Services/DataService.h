@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HistoricLocation.h"
 
 @interface DataService : NSObject
 
 + (instancetype)sharedInstance;
-- (void)getLocationsWithCompletion:(void (^)(NSArray *locations))completion;
+- (void)getLocationsFromCity:(NSString *) city withCompletion:(void (^)(NSArray *locations))completion;
+- (void)saveLocation:(HistoricLocation *)location inCity:(NSString *)city;
 
 @end

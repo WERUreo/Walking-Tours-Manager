@@ -16,12 +16,16 @@
 @property (nonatomic, strong) NSString *locationDescription;
 @property (nonatomic, strong) NSString *locationType;
 @property (nonatomic) CLLocationCoordinate2D locationCoordinates;
+@property (nonatomic, strong) NSDate *localRegistryDate;
+@property (nonatomic, strong) NSDate *nationalRegistryDate;
 
 - (instancetype)initWithName:(NSString *)name
                      address:(NSString *)address
                  description:(NSString *)description
                         type:(NSString *)type
-                 coordinates:(CLLocationCoordinate2D)coordinates;
+                 coordinates:(CLLocationCoordinate2D)coordinates
+           localRegistryDate:(NSDate *)localRegistryDate
+        nationalRegistryDate:(NSDate *)nationalRegistryDate;
 
 - (instancetype)initWithJSON:(NSDictionary *)json;
 

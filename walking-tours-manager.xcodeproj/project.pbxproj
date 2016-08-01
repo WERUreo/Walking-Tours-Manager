@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		423FA0731D4A36760091D316 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 423FA0721D4A36760091D316 /* CustomButton.m */; };
+		42650DC01D4EB4B20020A1E2 /* EditLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42650DBF1D4EB4B20020A1E2 /* EditLocationVC.m */; };
 		42C7357F1D4D54630013B6DA /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C7357E1D4D54630013B6DA /* DataService.m */; };
 		42C735831D4D612C0013B6DA /* HistoricLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C735821D4D612C0013B6DA /* HistoricLocation.m */; };
-		42C735861D4D6B9A0013B6DA /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C735851D4D6B9A0013B6DA /* TestViewController.m */; };
+		42C735891D4D9FF90013B6DA /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C735881D4D9FF90013B6DA /* MapVC.m */; };
 		42FDDD091D47EEDB0094D29D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD081D47EEDB0094D29D /* main.m */; };
 		42FDDD0C1D47EEDB0094D29D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD0B1D47EEDB0094D29D /* AppDelegate.m */; };
 		42FDDD121D47EEDB0094D29D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD101D47EEDB0094D29D /* Main.storyboard */; };
@@ -25,14 +25,14 @@
 /* Begin PBXFileReference section */
 		1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.release.xcconfig"; sourceTree = "<group>"; };
 		207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-walking-tours-manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		423FA0711D4A36760091D316 /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomButton.h; path = Views/CustomButton.h; sourceTree = "<group>"; };
-		423FA0721D4A36760091D316 /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomButton.m; path = Views/CustomButton.m; sourceTree = "<group>"; };
+		42650DBE1D4EB4B20020A1E2 /* EditLocationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditLocationVC.h; path = Controllers/EditLocationVC.h; sourceTree = "<group>"; };
+		42650DBF1D4EB4B20020A1E2 /* EditLocationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditLocationVC.m; path = Controllers/EditLocationVC.m; sourceTree = "<group>"; };
 		42C7357D1D4D54630013B6DA /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataService.h; path = Services/DataService.h; sourceTree = "<group>"; };
 		42C7357E1D4D54630013B6DA /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataService.m; path = Services/DataService.m; sourceTree = "<group>"; };
 		42C735811D4D612C0013B6DA /* HistoricLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoricLocation.h; path = Models/HistoricLocation.h; sourceTree = "<group>"; };
 		42C735821D4D612C0013B6DA /* HistoricLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoricLocation.m; path = Models/HistoricLocation.m; sourceTree = "<group>"; };
-		42C735841D4D6B9A0013B6DA /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = Controllers/TestViewController.h; sourceTree = "<group>"; };
-		42C735851D4D6B9A0013B6DA /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = Controllers/TestViewController.m; sourceTree = "<group>"; };
+		42C735871D4D9FF90013B6DA /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapVC.h; path = Controllers/MapVC.h; sourceTree = "<group>"; };
+		42C735881D4D9FF90013B6DA /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapVC.m; path = Controllers/MapVC.m; sourceTree = "<group>"; };
 		42FDDD041D47EEDB0094D29D /* walking-tours-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "walking-tours-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FDDD081D47EEDB0094D29D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		42FDDD0A1D47EEDB0094D29D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,8 +73,6 @@
 		423FA0701D4A36540091D316 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				423FA0711D4A36760091D316 /* CustomButton.h */,
-				423FA0721D4A36760091D316 /* CustomButton.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -165,8 +163,10 @@
 			children = (
 				42FDDD251D484E540094D29D /* LoginVC.h */,
 				42FDDD261D484E540094D29D /* LoginVC.m */,
-				42C735841D4D6B9A0013B6DA /* TestViewController.h */,
-				42C735851D4D6B9A0013B6DA /* TestViewController.m */,
+				42C735871D4D9FF90013B6DA /* MapVC.h */,
+				42C735881D4D9FF90013B6DA /* MapVC.m */,
+				42650DBE1D4EB4B20020A1E2 /* EditLocationVC.h */,
+				42650DBF1D4EB4B20020A1E2 /* EditLocationVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -302,12 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FDDD0C1D47EEDB0094D29D /* AppDelegate.m in Sources */,
-				423FA0731D4A36760091D316 /* CustomButton.m in Sources */,
+				42C735891D4D9FF90013B6DA /* MapVC.m in Sources */,
 				42FDDD231D484D740094D29D /* UIColor+Pistachio.m in Sources */,
 				42C7357F1D4D54630013B6DA /* DataService.m in Sources */,
+				42650DC01D4EB4B20020A1E2 /* EditLocationVC.m in Sources */,
 				42FDDD271D484E540094D29D /* LoginVC.m in Sources */,
 				42C735831D4D612C0013B6DA /* HistoricLocation.m in Sources */,
-				42C735861D4D6B9A0013B6DA /* TestViewController.m in Sources */,
 				42FDDD091D47EEDB0094D29D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.werureo.walking-tours-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.werureo.walking-tours-manager";
 				PRODUCT_NAME = "$(TARGET_NAME)";

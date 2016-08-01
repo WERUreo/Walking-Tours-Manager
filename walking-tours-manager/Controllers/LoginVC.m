@@ -20,12 +20,18 @@
 
 @implementation LoginVC
 
+////////////////////////////////////////////////////////////
+#pragma mark - View Controller Life Cycle
+////////////////////////////////////////////////////////////
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     //self.navigationController.navigationBar.backgroundColor = [UIColor gladeGreen];
 }
+
+////////////////////////////////////////////////////////////
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -37,15 +43,9 @@
     }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+////////////////////////////////////////////////////////////
+#pragma mark - IBActions
+////////////////////////////////////////////////////////////
 
 - (IBAction)loginButtonTapped:(id)sender
 {
@@ -53,31 +53,31 @@
     [login logInWithReadPermissions:@[@"email"]
                  fromViewController:self
                             handler:^(FBSDKLoginManagerLoginResult *result, NSError *error)
-                            {
-                                if (error)
-                                {
-                                    NSLog(@"Facebook login failed.  Error %@", error.localizedDescription);
-                                }
-                                else
-                                {
-                                    NSString *accessToken = [[FBSDKAccessToken currentAccessToken] tokenString];
-                                    FIRAuthCredential *credential = [FIRFacebookAuthProvider credentialWithAccessToken:accessToken];
+    {
+        if (error)
+        {
+            NSLog(@"Facebook login failed.  Error %@", error.localizedDescription);
+        }
+        else
+        {
+            NSString *accessToken = [[FBSDKAccessToken currentAccessToken] tokenString];
+            FIRAuthCredential *credential = [FIRFacebookAuthProvider credentialWithAccessToken:accessToken];
 
-                                    [[FIRAuth auth] signInWithCredential:credential
-                                                              completion:^(FIRUser * _Nullable user, NSError * _Nullable error)
-                                                              {
-                                                                  if (error)
-                                                                  {
-                                                                      NSLog(@"Login failed. %@", error);
-                                                                  }
-                                                                  else
-                                                                  {
-                                                                      [[NSUserDefaults standardUserDefaults] setValue:user.uid forKey:@"uid"];
-                                                                      [self performSegueWithIdentifier:@"UserLoggedInSegue" sender:nil];
-                                                                  }
-                                                              }];
-                                }
-                            }];
+            [[FIRAuth auth] signInWithCredential:credential
+                                      completion:^(FIRUser * _Nullable user, NSError * _Nullable error)
+            {
+                if (error)
+                {
+                    NSLog(@"Login failed. %@", error);
+                }
+                else
+                {
+                    [[NSUserDefaults standardUserDefaults] setValue:user.uid forKey:@"uid"];
+                    [self performSegueWithIdentifier:@"UserLoggedInSegue" sender:nil];
+                }
+            }];
+        }
+    }];
 }
 
 @end
