@@ -70,12 +70,12 @@
     FIRDatabaseReference *locationsRef = [[[self ref] child:@"historic-locations"] child:city];
 
     NSString *key = [locationsRef childByAutoId].key;
-    [[[locationsRef child:key] child:@"name"] setValue:location.locationName];
-    [[[locationsRef child:key] child:@"address"] setValue:location.locationAddress];
+    [[[locationsRef child:key] child:@"name"] setValue:location.title];
+    [[[locationsRef child:key] child:@"address"] setValue:location.subtitle];
     [[[locationsRef child:key] child:@"description"] setValue:location.locationDescription];
     [[[locationsRef child:key] child:@"type"] setValue:location.locationType];
-    [[[[locationsRef child:key] child:@"location"] child:@"latitude"] setValue:@(location.locationCoordinates.latitude)];
-    [[[[locationsRef child:key] child:@"location"] child:@"longitude"] setValue:@(location.locationCoordinates.longitude)];
+    [[[[locationsRef child:key] child:@"location"] child:@"latitude"] setValue:@(location.coordinate.latitude)];
+    [[[[locationsRef child:key] child:@"location"] child:@"longitude"] setValue:@(location.coordinate.longitude)];
 
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.sss";

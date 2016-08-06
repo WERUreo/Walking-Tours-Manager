@@ -9,15 +9,13 @@
 #import "MapVC.h"
 #import "DataService.h"
 #import "EditLocationVC.h"
-@import GoogleMaps;
 
 @interface MapVC ()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) NSString *city;
 @property (nonatomic, strong) NSMutableArray *locations;
-@property (nonatomic, strong) GMSMapView *mapView;
-@property (nonatomic, strong) NSMutableArray<GMSMarker *> *markers;
 @property (nonatomic) CLLocationCoordinate2D startingLocation;
 
 @end
@@ -51,39 +49,15 @@
 }
 
 ////////////////////////////////////////////////////////////
-
-- (GMSMapView *)mapView
-{
-    if (!_mapView)
-    {
-        _mapView = [[GMSMapView alloc] initWithFrame:self.view.frame];
-    }
-
-    return _mapView;
-}
-
-////////////////////////////////////////////////////////////
-
-- (NSMutableArray<GMSMarker *> *)markers
-{
-    if (!_markers)
-    {
-        _markers = [NSMutableArray array];
-    }
-
-    return _markers;
-}
-
-////////////////////////////////////////////////////////////
 #pragma mark - View Controller Life Cycle
 ////////////////////////////////////////////////////////////
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.mapView.delegate = self;
 
     [self updateMapView];
-    self.view = self.mapView;
 }
 
 ////////////////////////////////////////////////////////////
@@ -92,11 +66,11 @@
 
 - (IBAction)citySelected:(id)sender
 {
-    if (_segmentedControl.selectedSegmentIndex == 0)
+    if (self.segmentedControl.selectedSegmentIndex == 0)
     {
         self.city = @"orlando";
     }
-    else if (_segmentedControl.selectedSegmentIndex == 1)
+    else if (self.segmentedControl.selectedSegmentIndex == 1)
     {
         self.city = @"ormond-beach";
     }
@@ -135,19 +109,26 @@
 
 - (void)updateMapView
 {
-    _startingLocation = [self getStartingLocation];
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:_startingLocation
-                                                               zoom:15];
-    self.mapView.camera = camera;
+    [self centerMapOnLocation:[self getStartingLocation]];
     [self loadLocations];
+}
+
+////////////////////////////////////////////////////////////
+
+- (void)centerMapOnLocation:(CLLocationCoordinate2D)location
+{
+    CLLocationDistance regionRadius = 1000;
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, regionRadius * 2.0, regionRadius * 2.0);
+    [self.mapView setRegion:region];
 }
 
 ////////////////////////////////////////////////////////////
 
 - (void)loadLocations
 {
-    [self.mapView clear];
-    [self.markers removeAllObjects];
+    // clear previously placed annotations first
+    [self.mapView removeAnnotations:_mapView.annotations];
+    [self.locations removeAllObjects];
 
     [[DataService sharedInstance] getLocationsFromCity:self.city withCompletion:^(NSArray *locations)
     {
@@ -155,11 +136,7 @@
 
         for (HistoricLocation *location in self.locations)
         {
-            GMSMarker *marker = [GMSMarker markerWithPosition:location.locationCoordinates];
-            marker.title = location.locationName;
-            marker.snippet = location.locationAddress;
-            marker.map = self.mapView;
-            [self.markers addObject:marker];
+            [self.mapView addAnnotation:location];
         }
     }];
 }
@@ -173,10 +150,55 @@
     UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
     EditLocationVC *vc = (EditLocationVC *)navController.topViewController;
 
-    if ([segue.identifier isEqualToString:@"AddLocationSegue"])
+    vc.startingCoordinates = [self getStartingLocation];
+    vc.city = self.city;
+    
+    if ([segue.identifier isEqualToString:@"EditLocationSegue"])
     {
-        vc.startingCoordinates = [self getStartingLocation];
+        vc.location = (HistoricLocation *)sender;
     }
+}
+
+////////////////////////////////////////////////////////////
+#pragma mark - MKMapViewDelegate
+////////////////////////////////////////////////////////////
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    static NSString *identifier = @"LocationAnnotation";
+
+    if ([annotation isKindOfClass:[HistoricLocation class]])
+    {
+        MKAnnotationView *annotationView = (MKAnnotationView *) [self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        if (annotationView == nil)
+        {
+            annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            annotationView.canShowCallout = YES;
+
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"64x64"]];
+            annotationView.leftCalloutAccessoryView = imageView;
+
+            UIButton *calloutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            annotationView.rightCalloutAccessoryView = calloutButton;
+
+        }
+        else
+        {
+            annotationView.annotation = annotation;
+        }
+
+        return annotationView;
+    }
+
+    return nil;
+}
+
+////////////////////////////////////////////////////////////
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    HistoricLocation *location = (HistoricLocation *)view.annotation;
+    [self performSegueWithIdentifier:@"EditLocationSegue" sender:location];
 }
 
 @end

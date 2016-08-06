@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong) HistoricLocation *location;
 @property (nonatomic) CLLocationCoordinate2D startingCoordinates;
+@property (nonatomic, strong) NSString *city;
 
 @end

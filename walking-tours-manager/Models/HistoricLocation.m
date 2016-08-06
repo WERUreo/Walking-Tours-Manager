@@ -25,11 +25,11 @@
     self = [super init];
     if (self)
     {
-        self.locationName = name;
-        self.locationAddress = address;
+        self.title = name;
+        self.subtitle = address;
         self.locationDescription = description;
         self.locationType = type;
-        self.locationCoordinates = coordinates;
+        self.coordinate = coordinates;
         self.localRegistryDate = localRegistryDate;
         self.nationalRegistryDate = nationalRegistryDate;
     }
@@ -44,11 +44,11 @@
     self = [super init];
     if (self)
     {
-        self.locationName = [json objectForKey:@"name"];
-        self.locationAddress = [json objectForKey:@"address"];
+        self.title = [json objectForKey:@"name"];
+        self.subtitle = [json objectForKey:@"address"];
         self.locationDescription = [json objectForKey:@"description"];
         self.locationType = [json objectForKey:@"type"];
-        self.locationCoordinates = CLLocationCoordinate2DMake([[[json objectForKey:@"location"] objectForKey:@"latitude"] doubleValue], [[[json objectForKey:@"location"] objectForKey:@"longitude"] doubleValue]);
+        self.coordinate = CLLocationCoordinate2DMake([[[json objectForKey:@"location"] objectForKey:@"latitude"] doubleValue], [[[json objectForKey:@"location"] objectForKey:@"longitude"] doubleValue]);
 
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.sss";

@@ -7,7 +7,7 @@
 //
 
 #import "EditLocationVC.h"
-@import GoogleMaps;
+#import "DataService.h"
 @import GooglePlaces;
 
 @interface EditLocationVC () <GMSAutocompleteViewControllerDelegate>
@@ -22,44 +22,11 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *typeSegmentedControl;
 @property (weak, nonatomic) IBOutlet UITextField *latitudeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *longitudeTextField;
-@property (weak, nonatomic) IBOutlet UIView *mapViewContainer;
-
-////////////////////////////////////////////////////////////
-#pragma mark - Properties
-////////////////////////////////////////////////////////////
-
-@property (strong, nonatomic) GMSMapView *mapView;
-@property (strong, nonatomic) GMSCameraPosition *camera;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
 @implementation EditLocationVC
-
-////////////////////////////////////////////////////////////
-#pragma mark - Getters/Setters
-////////////////////////////////////////////////////////////
-
-- (HistoricLocation *)location
-{
-    if (!_location)
-    {
-        _location = [[HistoricLocation alloc] init];
-    }
-
-    return _location;
-}
-
-////////////////////////////////////////////////////////////
-
-- (GMSMapView *)mapView
-{
-    if (!_mapView)
-    {
-        _mapView = [[GMSMapView alloc] initWithFrame:self.mapViewContainer.bounds];
-    }
-
-    return _mapView;
-}
 
 ////////////////////////////////////////////////////////////
 #pragma mark - View Controller Life Cycle
@@ -69,18 +36,7 @@
 {
     [super viewDidLoad];
 
-    self.camera = [GMSCameraPosition cameraWithTarget:self.startingCoordinates zoom:15];
-}
-
-////////////////////////////////////////////////////////////
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-
-    [self.mapViewContainer.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    self.mapView.camera = self.camera;
-    [self.mapViewContainer addSubview:self.mapView];
+    [self populateViewWithLocation:self.location];
 }
 
 ////////////////////////////////////////////////////////////
@@ -89,7 +45,15 @@
 
 - (IBAction)saveLocationTapped:(id)sender
 {
-    
+    HistoricLocation *location = [[HistoricLocation alloc] initWithName:self.nameTextField.text
+                                                                address:self.addressTextField.text
+                                                            description:self.descriptionTextView.text
+                                                                   type:[self getLocationTypeFromSegmentedControl]
+                                                            coordinates:CLLocationCoordinate2DMake([self.latitudeTextField.text doubleValue], [self.longitudeTextField.text doubleValue])
+                                                      localRegistryDate:nil
+                                                   nationalRegistryDate:nil];
+    [[DataService sharedInstance] saveLocation:location inCity:self.city];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 ////////////////////////////////////////////////////////////
@@ -109,19 +73,79 @@
 }
 
 ////////////////////////////////////////////////////////////
+#pragma mark - Helper Functions
+////////////////////////////////////////////////////////////
+
+- (NSInteger)setSelectedIndex:(NSString *)locationType
+{
+    if ([locationType isEqualToString:@"Building"])
+    {
+        return 0;
+    }
+    else if ([locationType isEqualToString:@"Sign"])
+    {
+        return 1;
+    }
+    else if ([locationType isEqualToString:@"Park"])
+    {
+        return 2;
+    }
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////
+
+- (NSString *)getLocationTypeFromSegmentedControl
+{
+    switch (self.typeSegmentedControl.selectedSegmentIndex)
+    {
+        case 0:
+            return @"Building";
+        case 1:
+            return @"Sign";
+        case 2:
+            return @"Park";
+        default:
+            return @"Building";
+    }
+}
+
+////////////////////////////////////////////////////////////
+
+- (void)populateViewWithLocation:(HistoricLocation *)location
+{
+    CLLocationCoordinate2D centerCoordinate = (location) ? location.coordinate : self.startingCoordinates;
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(centerCoordinate, 1000, 1000);
+    [self.mapView setRegion:region];
+
+    if (location)
+    {
+        self.nameTextField.text = location.title;
+        self.addressTextField.text = location.subtitle;
+        self.descriptionTextView.text = location.locationDescription;
+        self.typeSegmentedControl.selectedSegmentIndex = [self setSelectedIndex:location.locationType];
+        self.latitudeTextField.text = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
+        self.longitudeTextField.text = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
+
+        [self.mapView addAnnotation:location];
+    }
+}
+
+////////////////////////////////////////////////////////////
 #pragma mark - GMSAutocompleteViewControllerDelegate
 ////////////////////////////////////////////////////////////
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController didAutocompleteWithPlace:(GMSPlace *)place
 {
-    self.nameTextField.text = place.name;
-    self.addressTextField.text = place.formattedAddress;
-    self.latitudeTextField.text = [NSString stringWithFormat:@"%f", place.coordinate.latitude];
-    self.longitudeTextField.text = [NSString stringWithFormat:@"%f", place.coordinate.longitude];
-
-    GMSMarker *marker = [GMSMarker markerWithPosition:place.coordinate];
-    marker.map = self.mapView;
-    self.camera = [GMSCameraPosition cameraWithTarget:place.coordinate zoom:15];
+    HistoricLocation *location = [[HistoricLocation alloc] initWithName:place.name
+                                                                address:place.formattedAddress
+                                                            description:@"TBD"
+                                                                   type:@"Building"
+                                                            coordinates:place.coordinate
+                                                      localRegistryDate:nil
+                                                   nationalRegistryDate:nil];
+    [self populateViewWithLocation:location];
 
     [self dismissViewControllerAnimated:YES completion:nil];
 }

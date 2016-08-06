@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42337FE61D542D15005E10C8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42337FE51D542D15005E10C8 /* MapKit.framework */; };
 		42650DC01D4EB4B20020A1E2 /* EditLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42650DBF1D4EB4B20020A1E2 /* EditLocationVC.m */; };
 		42C7357F1D4D54630013B6DA /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C7357E1D4D54630013B6DA /* DataService.m */; };
 		42C735831D4D612C0013B6DA /* HistoricLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 42C735821D4D612C0013B6DA /* HistoricLocation.m */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.release.xcconfig"; sourceTree = "<group>"; };
 		207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-walking-tours-manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42337FE51D542D15005E10C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		42650DBE1D4EB4B20020A1E2 /* EditLocationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditLocationVC.h; path = Controllers/EditLocationVC.h; sourceTree = "<group>"; };
 		42650DBF1D4EB4B20020A1E2 /* EditLocationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditLocationVC.m; path = Controllers/EditLocationVC.m; sourceTree = "<group>"; };
 		42C7357D1D4D54630013B6DA /* DataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataService.h; path = Services/DataService.h; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42337FE61D542D15005E10C8 /* MapKit.framework in Frameworks */,
 				C14A3CAF9D68B8339ABA87C6 /* libPods-walking-tours-manager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +71,13 @@
 				1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		42337FE41D53732B005E10C8 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Nibs;
 			sourceTree = "<group>";
 		};
 		423FA0701D4A36540091D316 /* Views */ = {
@@ -128,6 +138,7 @@
 				42FDDD201D484D650094D29D /* Categories */,
 				42FDDD241D484E300094D29D /* Controllers */,
 				42C735801D4D61000013B6DA /* Models */,
+				42337FE41D53732B005E10C8 /* Nibs */,
 				42C7357C1D4D54400013B6DA /* Services */,
 				42506CB61D4B72E200B33B5E /* Storyboards */,
 				423FA0701D4A36540091D316 /* Views */,
@@ -174,6 +185,7 @@
 		D813C04AEE3AF35B6C3FB2BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42337FE51D542D15005E10C8 /* MapKit.framework */,
 				207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */,
 			);
 			name = Frameworks;
@@ -213,6 +225,11 @@
 				TargetAttributes = {
 					42FDDD031D47EEDB0094D29D = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

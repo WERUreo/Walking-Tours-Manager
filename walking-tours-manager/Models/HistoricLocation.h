@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-@import CoreLocation;
+@import MapKit;
 
-@interface HistoricLocation : NSObject
+@interface HistoricLocation : NSObject <MKAnnotation>
 
-@property (nonatomic, strong) NSString *locationName;
-@property (nonatomic, strong) NSString *locationAddress;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
+@property (nonatomic) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong) NSString *locationDescription;
 @property (nonatomic, strong) NSString *locationType;
-@property (nonatomic) CLLocationCoordinate2D locationCoordinates;
 @property (nonatomic, strong) NSDate *localRegistryDate;
 @property (nonatomic, strong) NSDate *nationalRegistryDate;
+
+////////////////////////////////////////////////////////////
 
 - (instancetype)initWithName:(NSString *)name
                      address:(NSString *)address
@@ -26,6 +28,8 @@
                  coordinates:(CLLocationCoordinate2D)coordinates
            localRegistryDate:(NSDate *)localRegistryDate
         nationalRegistryDate:(NSDate *)nationalRegistryDate;
+
+////////////////////////////////////////////////////////////
 
 - (instancetype)initWithJSON:(NSDictionary *)json;
 

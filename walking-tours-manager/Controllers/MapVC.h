@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "HistoricLocation.h"
+@import MapKit;
 
-@interface MapVC : UIViewController
+@interface MapVC : UIViewController <MKMapViewDelegate>
 
 - (IBAction)citySelected:(id)sender;
 
