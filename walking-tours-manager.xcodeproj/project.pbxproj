@@ -20,12 +20,12 @@
 		42FDDD1F1D47F1380094D29D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42FDDD1E1D47F1380094D29D /* GoogleService-Info.plist */; };
 		42FDDD231D484D740094D29D /* UIColor+Pistachio.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD221D484D740094D29D /* UIColor+Pistachio.m */; };
 		42FDDD271D484E540094D29D /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FDDD261D484E540094D29D /* LoginVC.m */; };
-		C14A3CAF9D68B8339ABA87C6 /* libPods-walking-tours-manager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */; };
+		F3F99F0D98E5D191620ED514 /* libPods-walking-tours-manager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A5E79E171EF8EAC70146DF /* libPods-walking-tours-manager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.release.xcconfig"; sourceTree = "<group>"; };
-		207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-walking-tours-manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22BBB978F7B930003EA45066 /* Pods-walking-tours-manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.debug.xcconfig"; sourceTree = "<group>"; };
+		41A5E79E171EF8EAC70146DF /* libPods-walking-tours-manager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-walking-tours-manager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42337FE51D542D15005E10C8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		42650DBE1D4EB4B20020A1E2 /* EditLocationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditLocationVC.h; path = Controllers/EditLocationVC.h; sourceTree = "<group>"; };
 		42650DBF1D4EB4B20020A1E2 /* EditLocationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditLocationVC.m; path = Controllers/EditLocationVC.m; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		42FDDD221D484D740094D29D /* UIColor+Pistachio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Pistachio.m"; path = "Categories/UIColor+Pistachio.m"; sourceTree = "<group>"; };
 		42FDDD251D484E540094D29D /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = Controllers/LoginVC.h; sourceTree = "<group>"; };
 		42FDDD261D484E540094D29D /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = Controllers/LoginVC.m; sourceTree = "<group>"; };
-		59E30ED024E4EB61EEBF421D /* Pods-walking-tours-manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.debug.xcconfig"; sourceTree = "<group>"; };
+		530170A642761BF8627D31C4 /* Pods-walking-tours-manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-walking-tours-manager.release.xcconfig"; path = "Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,22 +57,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				42337FE61D542D15005E10C8 /* MapKit.framework in Frameworks */,
-				C14A3CAF9D68B8339ABA87C6 /* libPods-walking-tours-manager.a in Frameworks */,
+				F3F99F0D98E5D191620ED514 /* libPods-walking-tours-manager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10967C47E3F07ED8BFC01665 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				59E30ED024E4EB61EEBF421D /* Pods-walking-tours-manager.debug.xcconfig */,
-				1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		42337FE41D53732B005E10C8 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,8 +110,8 @@
 			children = (
 				42FDDD061D47EEDB0094D29D /* walking-tours-manager */,
 				42FDDD051D47EEDB0094D29D /* Products */,
-				10967C47E3F07ED8BFC01665 /* Pods */,
 				D813C04AEE3AF35B6C3FB2BD /* Frameworks */,
+				996C0350FB54E1A7BAD90503 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,11 +173,20 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		996C0350FB54E1A7BAD90503 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22BBB978F7B930003EA45066 /* Pods-walking-tours-manager.debug.xcconfig */,
+				530170A642761BF8627D31C4 /* Pods-walking-tours-manager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D813C04AEE3AF35B6C3FB2BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				42337FE51D542D15005E10C8 /* MapKit.framework */,
-				207C7E9AA8CF4645CB4C6A8D /* libPods-walking-tours-manager.a */,
+				41A5E79E171EF8EAC70146DF /* libPods-walking-tours-manager.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -198,12 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42FDDD1B1D47EEDB0094D29D /* Build configuration list for PBXNativeTarget "walking-tours-manager" */;
 			buildPhases = (
-				90B92F0520EBAB474151282C /* Check Pods Manifest.lock */,
+				242C1086C0E421FCB0235E36 /* [CP] Check Pods Manifest.lock */,
 				42FDDD001D47EEDB0094D29D /* Sources */,
 				42FDDD011D47EEDB0094D29D /* Frameworks */,
 				42FDDD021D47EEDB0094D29D /* Resources */,
-				CC61B4B17BE3B339FB5B6C9B /* Embed Pods Frameworks */,
-				76D7EB8CACAB83D4E05526DA /* Copy Pods Resources */,
+				6DED8D4F67F9557BB29B214E /* [CP] Embed Pods Frameworks */,
+				84A1073BD8CA35326762D7BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,7 +220,7 @@
 		42FDDCFC1D47EEDB0094D29D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = WERUreo;
 				TargetAttributes = {
 					42FDDD031D47EEDB0094D29D = {
@@ -266,49 +266,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		76D7EB8CACAB83D4E05526DA /* Copy Pods Resources */ = {
+		242C1086C0E421FCB0235E36 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		90B92F0520EBAB474151282C /* Check Pods Manifest.lock */ = {
+		6DED8D4F67F9557BB29B214E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CC61B4B17BE3B339FB5B6C9B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A1073BD8CA35326762D7BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-walking-tours-manager/Pods-walking-tours-manager-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -365,8 +365,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -410,8 +412,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -437,7 +441,7 @@
 		};
 		42FDDD1C1D47EEDB0094D29D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59E30ED024E4EB61EEBF421D /* Pods-walking-tours-manager.debug.xcconfig */;
+			baseConfigurationReference = 22BBB978F7B930003EA45066 /* Pods-walking-tours-manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
@@ -450,7 +454,7 @@
 		};
 		42FDDD1D1D47EEDB0094D29D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1311276B91B09B24ADE5FDBA /* Pods-walking-tours-manager.release.xcconfig */;
+			baseConfigurationReference = 530170A642761BF8627D31C4 /* Pods-walking-tours-manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "walking-tours-manager/Info.plist";
